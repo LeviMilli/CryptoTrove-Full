@@ -1,0 +1,8 @@
+#tablenews th {
+    font-size: 30px;
+}
+
+#tablenews th:hover {
+   background-color: #212529;
+   color: white;
+}

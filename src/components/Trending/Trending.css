@@ -1,0 +1,31 @@
+.centerFlex {
+    margin-top: 100px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.secondFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.secondFlex .card-body {
+background-color: #212529;
+height: 20%;
+color: white ;
+
+}
+
+.global {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.space {
+    margin: 20px 50px;
+}
+
