@@ -27,8 +27,10 @@ function CollapsibleExample() {
           </Nav>
           {user ? (     
           <Nav className='links'>
+            <Nav.Link style={{"color" : "lime"}} href="/portfolio">Portfolio</Nav.Link>
             <Nav.Link href="#deets">Market Sentiment</Nav.Link>
             <Nav.Link href="/news">News</Nav.Link>
+            
             <Nav.Link onClick={handleLogOut} href="/">Logout</Nav.Link>
           </Nav>
             ) : (          

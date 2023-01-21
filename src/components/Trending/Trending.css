@@ -14,8 +14,9 @@
 }
 
 .secondFlex .card-body {
-background-color: #212529;
-height: 20%;
+background-image: linear-gradient(black, #212529);
+
+height: 20% !important;
 color: white ;
 
 }

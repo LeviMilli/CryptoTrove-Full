@@ -7,12 +7,12 @@ import { BrowserRouter } from "react-router-dom";
 import { AppContextWrapper } from "./context/coin.context";
 
 ReactDOM.render(
-  <React.StrictMode>
+
   <BrowserRouter>
   <AppContextWrapper>
     <App />
   </AppContextWrapper> 
   </BrowserRouter>
-</React.StrictMode>,
+,
   document.getElementById("root")
 );

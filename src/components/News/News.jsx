@@ -29,7 +29,7 @@ function News() {
 
 
                 <tr>
-                <td>{items.Title}</td>
+                <td className='orangeBitcoin'>{items.Title}</td>
                 <a href={items.URL}><td>MORE...</td></a>
                  </tr>
 

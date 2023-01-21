@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, useRef } from "react";
 import axios from "axios";
 import { AppContext } from "./context/coin.context";
 import { Routes, Route } from "react-router-dom";
@@ -11,6 +11,9 @@ import Footer from "./components/Footer/Footer";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import News from "./components/News/News"
+import TransactionForm from "./components/Transactions/TransactionForm";
+import Portfolio from "./components/Transactions/Portfolio";
+
 
 
 function App() {
@@ -36,8 +39,12 @@ function App() {
 // MARKET SENTIMENT
 // NFTS
 
+
+
   useEffect(() => {
-    const fetchCurrencyData = async () => {
+    async function fetchCurrencyData(){
+
+      try {
         setLoading(true)
         const res = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
         console.log("rendering")
@@ -56,23 +63,31 @@ function App() {
           }
         };
 
-
         const newsResults = await axios.request(options)
-        console.log(newsResults.data)
+
 
 
         // setTrending(trend.data)
 
         setNews(newsResults.data)
-        console.log(news, "hey")
+    
         setTotal(totalCap.data.data)
-        console.log(total, "hey eyadl")
+       
         setCoins(res.data)
-        
+
         setLoading(false)
+        
+      }
+      catch(err){
+        setLoading(false)
+      }
     }
-    fetchCurrencyData()
+
+
+     fetchCurrencyData()
 }, [])
+
+
 
 
 
@@ -103,6 +118,7 @@ console.log(coins)
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/news" element={<News/>}/>
+        <Route path="/portfolio" element={<Portfolio/>}/>
       </Routes>
       <Footer/>
     </div>

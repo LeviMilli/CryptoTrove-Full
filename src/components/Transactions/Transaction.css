@@ -1,0 +1,168 @@
+input {
+    color: black
+}
+
+.select {
+    background-color: gray;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 40%;
+}
+
+option {
+    background-color: black !important;
+}
+
+input {
+    text-align: center;
+    width: 30% !important;
+}
+
+.text-xl {
+    margin-top: 30px;
+}
+
+.submit {
+    background-color: green !important;
+    
+    margin-top: 20px;
+}
+
+.submit:hover, .submit:active {
+    background-color: lightgreen !important;
+    border: green 4px solid !important;
+    
+}
+
+.transactions {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.flexAlert {
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 40px;
+}
+.nono {
+    margin: 0;
+}
+
+.mainText h1 {
+    font-size: 1rem;
+}
+
+.finger {
+    cursor: pointer;
+}
+
+.text-white {
+    color: #f7931a !important;
+}
+
+.portfolioHeader {
+    color: #f7931a !important;
+    text-shadow: white 1px 1px 1px;
+    font-size: 2rem;
+    
+}
+
+#bodySize p {
+    font-size: 1rem;
+    color: white;
+}
+#bodySize .card-title {
+    font-size: 1.3rem;
+    color: white !important;
+}
+#bodySize.card-body {
+margin: 0 !important;
+background-image: linear-gradient(black, gray);
+}
+
+#bodySize button {
+ width: 30%;
+ background-color: red;
+ 
+ color: white;
+ height: 15%;
+}
+
+#bodySize button:hover {
+    background-color: lightcoral;
+   
+   }
+
+#formId {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: red;
+}
+ 
+
+
+
+@media (max-width: 800px) {
+    #bodySize p {
+        font-size: .7rem;
+        color: white;
+    }
+    #bodySize .card-title {
+        font-size: 1rem;
+        color: white !important;
+    }
+    .card-body {
+        height: 300px !important;
+        width: 300px !important;
+    }
+
+    .card-body h2 {
+        font-size: 2em !important;
+    }
+    .gap-4 p {
+        display: flex;
+        padding: 0 !important
+        
+    }
+    /* styles here */
+  }
+
+  @media (max-width: 617px) {
+    #bodySize p {
+        font-size: .7rem;
+        color: white;
+    }
+    #bodySize .card-title {
+        font-size: 1rem;
+        color: white !important;
+    }
+    .card-body {
+        height: 210px !important;
+        width: 210px !important;
+    }
+
+    .card-body h2 {
+        font-size: 2em !important;
+    }
+    .gap-4 p {
+        display: flex;
+        padding: 0 !important
+        
+    }
+    #bodySize button, .submit  {
+        width: 30%;
+        font-size: .5rem !important;
+        background-color: red;
+        color: white;
+        height: 15%;
+       }
+    /* styles here */
+  }

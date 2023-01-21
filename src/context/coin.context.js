@@ -12,11 +12,45 @@ function AppContextWrapper(props){
     const [total, setTotal] = useState()
     const [user, setUser] = useState(null);
     const [news, setNews] = useState([])
+    const [ transactions, setTransaction  ] = useState([])
+
+    
 
     async function handleLogOut(){
-        await axios.get('https://scarlet-elk-gown.cyclic.app/api/logout', {withCredentials: true})
+        await axios.get('http://localhost:5005/api/logout', {withCredentials: true})
         setUser(null)
       }
+
+
+      useEffect(() => {
+
+  
+        async function fetchUser(){
+      
+          try {
+      
+      
+            let response = await axios.get('http://localhost:5005/api/user', {withCredentials: true})  
+          
+            setUser(response.data)
+      
+      
+      
+            setLoading(false)
+            
+          }
+          catch(err){
+            setLoading(false)
+          }
+        
+        }
+      
+      
+         fetchUser()
+       
+      }, [])
+
+
     
     // async function handleLogOut(){
     //   await axios.get('https://scarlet-elk-gown.cyclic.app/api/logout', {withCredentials: true})
@@ -74,7 +108,8 @@ function AppContextWrapper(props){
          total, setTotal,
          user, setUser,
          handleLogOut,
-         news, setNews
+         news, setNews,
+         transactions, setTransaction 
          }}>
             {props.children}
         </AppContext.Provider>

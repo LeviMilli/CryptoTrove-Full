@@ -26,7 +26,7 @@ const TopExchangesSection = () => {
         <div className="card w-96 bg-base-300 shadow-xl">
        
             <div className="card-body">
-                <h2 className="card-title mb-2">💹 Top Exchanges</h2>
+                <h2 className="card-title mb-2">💹 Top Exchanges 24hr Volume</h2>
                 <div className='flex gap-4'>
                     <span className='yup'>📊</span>
                     <p><b>{trendingExchanges[0].name}</b></p>
