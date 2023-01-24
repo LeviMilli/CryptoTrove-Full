@@ -26,7 +26,7 @@ const Portfolio = () => {
 
         if (user) {
             const fetchTransactions = async () => {
-                const response = await axios.get('http://localhost:5005/api/transactions')
+                const response = await axios.get('/api/transactions')
                 
                 setTransaction(response.data)
                 

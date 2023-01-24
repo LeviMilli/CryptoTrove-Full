@@ -24,7 +24,7 @@ function SignUp() {
           password: event.target.password.value, 
         }
         try {
-          await axios.post('http://localhost:5005/api/signup', user, {withCredentials: true})
+          await axios.post('/api/signup', user, {withCredentials: true})
           navigate('/signin')
         }
         catch(err){

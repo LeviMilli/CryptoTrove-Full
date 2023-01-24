@@ -17,9 +17,9 @@ function CollapsibleExample() {
 
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar id='blackNav' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">CryptoTrove</Navbar.Brand>
+        <Navbar.Brand id='mainHover' style={{"color" : "#f7931a"}} href="/">CryptoTrove</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -27,18 +27,19 @@ function CollapsibleExample() {
           </Nav>
           {user ? (     
           <Nav className='links'>
-            <Nav.Link style={{"color" : "lime"}} href="/portfolio">Portfolio</Nav.Link>
-            <Nav.Link href="#deets">Market Sentiment</Nav.Link>
+            <Nav.Link style={{"color" : "#90EE90"}} href="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="/sentiment">Market Sentiment</Nav.Link>
             <Nav.Link href="/news">News</Nav.Link>
             
-            <Nav.Link onClick={handleLogOut} href="/">Logout</Nav.Link>
+            <Nav.Link style={{"color" : "#FF5733"}} onClick={handleLogOut} href="/">Logout</Nav.Link>
           </Nav>
             ) : (          
           <Nav>
-            <Nav.Link href="#deets">Market Sentiment</Nav.Link>
-            <Nav.Link href="/news">News</Nav.Link>
-            <Nav.Link href="/signin">Login</Nav.Link>
+            <Nav.Link style={{"color" : "#90EE90"}} href="/signin">Login</Nav.Link>
             <Nav.Link href="/signup">Sign Up</Nav.Link>
+            <Nav.Link href="/sentiment">Market Sentiment</Nav.Link>
+            <Nav.Link href="/news">News</Nav.Link>
+
           </Nav>
           ) }
 

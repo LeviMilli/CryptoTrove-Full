@@ -2,3 +2,17 @@ a {
     border-bottom: none !important;
     text-decoration: none !important;
 }
+
+
+.nav-link:hover {
+color: #f7931a !important;
+    
+}
+
+#blackNav {
+    background-color: #212529 !important;
+}
+
+#mainHover:hover {
+    color: lime !important;
+}

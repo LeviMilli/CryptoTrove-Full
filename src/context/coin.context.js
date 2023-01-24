@@ -17,7 +17,7 @@ function AppContextWrapper(props){
     
 
     async function handleLogOut(){
-        await axios.get('http://localhost:5005/api/logout', {withCredentials: true})
+        await axios.get('/api/logout', {withCredentials: true})
         setUser(null)
       }
 
@@ -30,7 +30,7 @@ function AppContextWrapper(props){
           try {
       
       
-            let response = await axios.get('http://localhost:5005/api/user', {withCredentials: true})  
+            let response = await axios.get('/api/user', {withCredentials: true})  
           
             setUser(response.data)
       

@@ -78,7 +78,7 @@ input {
     font-size: 1.3rem;
     color: white !important;
 }
-#bodySize.card-body {
+#bodySize {
 margin: 0 !important;
 background-image: linear-gradient(black, gray);
 }
@@ -107,6 +107,15 @@ background-image: linear-gradient(black, gray);
     color: red;
 }
  
+@media (max-width: 900px) {
+
+    .fearIndex {
+        height: 390px !important;
+        
+    }
+
+  }
+
 
 
 
@@ -115,16 +124,20 @@ background-image: linear-gradient(black, gray);
         font-size: .7rem;
         color: white;
     }
-    #bodySize .card-title {
+    .fearIndex {
+        height: 300px !important;
+        
+    }
+    #bodySize {
         font-size: 1rem;
         color: white !important;
     }
-    .card-body {
+    #bodySize {
         height: 300px !important;
         width: 300px !important;
     }
 
-    .card-body h2 {
+    #bodySize h2 {
         font-size: 2em !important;
     }
     .gap-4 p {
@@ -133,6 +146,16 @@ background-image: linear-gradient(black, gray);
         
     }
     /* styles here */
+  }
+
+
+  @media (max-width: 660px) {
+
+    .fearIndex {
+        height: 250px !important;
+        
+    }
+
   }
 
   @media (max-width: 617px) {
@@ -144,12 +167,12 @@ background-image: linear-gradient(black, gray);
         font-size: 1rem;
         color: white !important;
     }
-    .card-body {
-        height: 210px !important;
-        width: 210px !important;
+    #bodySize .card-body {
+        height: 260px !important;
+        width: 260px !important;
     }
 
-    .card-body h2 {
+    #bodySize .card-body h2 {
         font-size: 2em !important;
     }
     .gap-4 p {
@@ -164,5 +187,34 @@ background-image: linear-gradient(black, gray);
         color: white;
         height: 15%;
        }
+
     /* styles here */
+  }
+  
+
+  @media (max-width: 560px) {
+
+    .fearIndex {
+        height: 200px !important;
+        
+    }
+    .apex {
+        margin-top: 130px;
+    }
+
+
+  }
+
+  @media (max-width: 505px) {
+
+    .fearIndex {
+        margin-bottom: 150px !important;
+        
+        
+    }
+    .apex {
+        margin-top: 130px;
+        margin-bottom: 0 !important;
+    }
+
   }

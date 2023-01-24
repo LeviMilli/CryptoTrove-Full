@@ -1,9 +1,16 @@
 .footer {
     display: flex;
     justify-content: center;
-    height: 50px;
+    align-items: center;
+    height: 60px;
     background-color:#212529;
     color: white;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 22vh;
+
+    
+}
+
+.footer p {
+    padding: 0 !important;
 }

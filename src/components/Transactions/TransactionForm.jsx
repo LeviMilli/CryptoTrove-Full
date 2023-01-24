@@ -53,7 +53,7 @@ const TransactionForm = () => {
   
     
 
-    const response = await axios.post('http://localhost:5005/api/create/transactions', {
+    const response = await axios.post('/api/create/transactions', {
       name : currencyName,
       price : price,
       quantity : qty,

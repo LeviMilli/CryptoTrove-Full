@@ -11,8 +11,8 @@ import Footer from "./components/Footer/Footer";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import News from "./components/News/News"
-import TransactionForm from "./components/Transactions/TransactionForm";
 import Portfolio from "./components/Transactions/Portfolio";
+import FearAndGreed from "./components/Sentiment Page/FearAndGreed";
 
 
 
@@ -47,8 +47,8 @@ function App() {
       try {
         setLoading(true)
         const res = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
-        console.log("rendering")
-        // const trend = await axios.get('https://api.coingecko.com/api/v3/search/trending');
+       
+   
 
         const totalCap = await axios.get('https://api.coingecko.com/api/v3/global')
 
@@ -98,16 +98,17 @@ function App() {
 
 
 if (loading) {
-  return <h1>loading</h1>
+  return <div className="loading"><img src="https://hackernoon.com/images/0*QdX-f4eHiimvQZoZ.gif"></img></div>
 }
 
-console.log(coins)
+
 
 
 
 
   return (
     <div className="App">
+      <div>
       <Navbar/>
       <Routes>
         <Route path="/" element={[
@@ -119,7 +120,9 @@ console.log(coins)
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/news" element={<News/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
+        <Route path="/sentiment" element={<FearAndGreed/>}/>
       </Routes>
+      </div>
       <Footer/>
     </div>
   );

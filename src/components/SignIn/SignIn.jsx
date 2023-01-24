@@ -28,7 +28,7 @@ async function handleSignIn(event){
     password: event.target.password.value, 
   }
   try {
-    let response = await axios.post('http://localhost:5005/api/signin', user,{withCredentials: true})
+    let response = await axios.post('/api/signin', user,{withCredentials: true})
     setUser(response.data)
   }
   catch(err){

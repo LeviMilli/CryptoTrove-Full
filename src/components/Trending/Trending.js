@@ -27,7 +27,7 @@ if (!total) {
 const commas = total.total_market_cap.usd.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 const change24 = total.market_cap_change_percentage_24h_usd.toFixed(2)
 
-console.log(commas, "hey")
+
 
   return (
 

@@ -10,6 +10,10 @@
     justify-content: center;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 
 body, html {
     width: 100%;

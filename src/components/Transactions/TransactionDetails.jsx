@@ -10,7 +10,7 @@ import "./Transaction.css"
 
 const TransactionDetails = ({transaction}) => {
 
-  const { user, transactions, setTransaction } = useContext(AppContext)
+  const { user, transactions, setTransaction, coins } = useContext(AppContext)
 
 
  console.log(transaction)
@@ -23,7 +23,7 @@ const TransactionDetails = ({transaction}) => {
       return
     }
 
-    await axios.delete(`http://localhost:5005/api/transactions/delete/${transaction._id}`, {withCredentials: true})
+    await axios.delete(`/api/transactions/delete/${transaction._id}`, {withCredentials: true})
 
     let newTransaction = transactions.filter(trans => {
       return  trans._id !== transaction._id
@@ -31,11 +31,29 @@ const TransactionDetails = ({transaction}) => {
     setTransaction(newTransaction)
   }
 
+  async function handleDelete(event, id){
+
+
+    if(!user){
+       return
+     }
+ 
+     await axios.delete(`/api/transactions/delete/${transaction._id}`, {withCredentials: true})
+ 
+     let newTransaction = transactions.filter(trans => {
+       return  trans._id !== transaction._id
+     })
+     setTransaction(newTransaction)
+   }
+
+console.log(coins)
+  const currentPrice = coins.find(cur => cur.name === transaction.name) ? (coins.find(cur => cur.name === transaction.name).current_price) : ""
+
   return (
 <Card className="cardWidth">
 <Card.Header className="portfolioHeader">{transaction.name} <img className="symbol" src={transaction.image}/></Card.Header>
 <Card.Body id="bodySize">
-  <Card.Title>Price:</Card.Title>
+  <Card.Title>Price Bought:</Card.Title>
   <Card.Text>
   ${transaction.price} USD
   </Card.Text>
@@ -47,10 +65,15 @@ const TransactionDetails = ({transaction}) => {
   <Card.Text>
   ${transaction.quantity * transaction.price}
   </Card.Text>
+  
+  <Card.Title>Value:</Card.Title>
   <Card.Text>
+  ${currentPrice * transaction.quantity}
+  </Card.Text>
+  <Card.Text>
+    
   <p><i>{formatDistanceToNow(new Date(transaction.createdAt), { addSuffix: true })}</i></p>
   </Card.Text>
-  
   <Button onClick={handleDelete} variant="delete">Delete</Button>
 </Card.Body>
 </Card>
