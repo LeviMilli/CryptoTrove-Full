@@ -67,3 +67,9 @@ html, body {
         font-size: 6px !important;
       }
       }
+
+      @media screen and (max-width: 390px) {
+        table {
+          font-size: 5px !important;
+        }
+        }

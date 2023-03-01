@@ -5,6 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../../context/coin.context";
 import Exchanges from "../Exchanges/Exchanges"
 import TrendingSection from './TrendingSection';
+import Spinner from 'react-bootstrap/Spinner';
 import "./Trending.css"
 
 
@@ -19,7 +20,7 @@ function Trending() {
 
 
 if (!total) {
-  return <h1>loading</h1>
+  return <div className='spinnerDiv'><Spinner className='spinner' animation="border" variant="light" /></div>
 
 
 }

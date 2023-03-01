@@ -82,7 +82,7 @@ html{
   font-size: 1.3rem;
   color: white;
   font-weight: 700;
-  background: linear-gradient( black 0%,#f7931a 100%);
+  background: linear-gradient( white 0%,#f7931a 100%);
   border: 0px;
   cursor: pointer;
   transition: opacity 0.25s ease-out;

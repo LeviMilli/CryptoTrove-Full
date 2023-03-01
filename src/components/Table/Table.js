@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { AppContext } from '../../context/coin.context';
+import Spinner from 'react-bootstrap/Spinner';
 import "./Table.css"
 
 function DarkExample() {
@@ -59,6 +60,9 @@ function DarkExample() {
 
 
 
+if (coins.length < 2) {
+  return <div className='spinnerDiv'><Spinner className='spinner' animation="border" variant="light" /></div>
+}
 
 
   return (
@@ -81,7 +85,9 @@ function DarkExample() {
          </tr>
                         
       </thead>
+      
       {coins.map((coins) => {
+        
         return (
           <tbody>
           <tr>

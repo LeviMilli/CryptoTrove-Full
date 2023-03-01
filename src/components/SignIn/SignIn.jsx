@@ -13,11 +13,11 @@ function SignIn({handleSignIn}) {
 	 }  = useContext(AppContext)
 
 
-	let test = "-> admin login <-";
+	let test = "-> demo login <-";
 
 
 	if(user){
-        return navigate('/')
+        return navigate('/portfolio')
       }
     
 

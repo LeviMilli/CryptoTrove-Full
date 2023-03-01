@@ -44,3 +44,15 @@ input {
 .orangeBitcoin {
     color: #f7931a;
 }
+
+.spinner {
+    height: 200px !important;
+    width: 200px !important;
+    justify-content: center;
+}
+
+.spinnerDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
